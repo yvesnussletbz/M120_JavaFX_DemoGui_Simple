@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="View.WorkLogFormController"
+            prefHeight="400.0" prefWidth="500.0" minWidth="500.0">
+
+    <top><Label text=""></Label></top>
+    <left></left>
+    <right></right>
+    <bottom>
+        <Label text="© Yves Nussle, TBZ">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="25.0" right="25.0" top="0" />
+            </BorderPane.margin>
+        </Label>
+    </bottom>
+    <center>
+        <GridPane vgap="10" hgap="5">
+            <BorderPane.margin>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+            </BorderPane.margin>
+            <children>
+                <Label text="Start " textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="0"></Label>
+                <DatePicker fx:id="startDate" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="0"></DatePicker>
+                <TextField fx:id="startTime" prefWidth="60" GridPane.columnIndex="2" GridPane.rowIndex="0"></TextField>
+
+                <Label text="End " textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="1"></Label>
+                <DatePicker fx:id="endDate" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1"></DatePicker>
+                <TextField fx:id="endTime" prefWidth="60" GridPane.columnIndex="2" GridPane.rowIndex="1"></TextField>
+
+                <Label text="Task " textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="3"></Label>
+                <ComboBox fx:id="projectList" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" ></ComboBox>
+
+                <Label text="Subject " textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="4"></Label>
+                <TextField fx:id="subject" prefWidth="60" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="2"></TextField>
+
+                <Button text="Save" fx:id="saveWorkLog" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5"></Button>
+            </children>
+            <!--<columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+            </columnConstraints>-->
+        </GridPane>
+    </center>
+</BorderPane>
+
